@@ -6,3 +6,4 @@ def func_print_range(value=1):
 
 if __name__ == '__main__':
     func_print_range(10)
+
