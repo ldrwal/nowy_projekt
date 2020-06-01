@@ -240,11 +240,16 @@ które znajdują się w poczekalni i nie zostały dodane do staging area.
     
     
 #### git reflog
-Zapis wszystkich operacji które zarejestrował git
+Zapis wszystkich operacji które zarejestrował git.
+Umożliwia nam to przenosienie w hisori zmian pliku.
 
     git reflog
     
     git reset --hard HEAD@{3}
+    git reset --hard 18b0024
+    
+#### git revert
+
 
     
     
