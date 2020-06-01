@@ -251,6 +251,7 @@ Umożliwia nam to przenosienie w hisori zmian pliku.
 #### git revert
 Cofanie zmian z dodaniem comita.
 Tworzy nam nowy comit z odwrotnościa zmian.
+Czyli jak w comicie który cofamy mieliśmy cos dodane to zostanie to usuniete.
 
     git revert HEAD
     git diff HEAD~2
