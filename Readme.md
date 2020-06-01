@@ -152,3 +152,12 @@ Laczenie galezi.
     
 #### git rebase
 Sposób scalania gałęzi poprzez dosłownie zmiane bazy.
+
+    # tworzymy zmiany w nowej gałęzi 
+    git checkout new_branch
+    git commit -a -m 'zmiana 1'
+    git commit -a -m 'zmiana 2'
+    # teraz wywolamy komende rebase która scali nowa gałąź z główną
+    # i przeniesie comity do gałęzi master
+    git rebase master
+    git checkout master
