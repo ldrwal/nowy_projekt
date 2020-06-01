@@ -232,6 +232,8 @@ Dopiero komenda
 usunie nasze zmiany w pliku.
 
 Gdy chcemy zrobić to odrazu, uzyjemy parametru --hard
+Nalezy pamiętać że polecenie to usunie nam także zmiany w plikach, 
+które znajdują się w poczekalni i nie zostały dodane do staging area.
 
     git commit plik1.py -m 'dodana zmiana w plik1'
     git reset --hard HEAD~
