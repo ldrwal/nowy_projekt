@@ -249,7 +249,12 @@ Umożliwia nam to przenosienie w hisori zmian pliku.
     git reset --hard 18b0024
     
 #### git revert
+Cofanie zmian z dodaniem comita.
+Tworzy nam nowy comit z odwrotnościa zmian.
 
+    git revert HEAD
+    git diff HEAD~2
+    
 
     
     
