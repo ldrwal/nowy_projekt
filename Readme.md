@@ -1,5 +1,7 @@
 # GIT
 
+## Wstęp
+
 ### Dlaczego git
 - Praca w trybie rozproszonym.
 - Gałęzie.
@@ -37,7 +39,7 @@ oraz zarzadzania haslami.
             helper = osxkeychain
     
 
-### Podstawy
+## Podstawy
 
 #### Git init/ git clone
 
@@ -120,8 +122,10 @@ lub usuwania zmian.
 
     git checkout 944ff4f
     git checkout master
+
     
-### GALEZIE
+## GALEZIE
+
 #### git branch / git checkout
 Tworzenie nowych gałęzi.
     
@@ -164,13 +168,22 @@ Sposób scalania gałęzi poprzez dosłownie zmiane bazy.
     
     
 #### git cherry-pick
-sposób połączenia tylko wybranych commitow z galezi z masterem
+sposób połączenia tylko wybranych commitow z galezi z masterem.
+Kopiowany jest commit wraz z opisem ale w masterze tworzony jest pod nowym znacznikiem.
 
     # tworzymy commity na nowej galezi
-    git checout -b new_branch_3
+    git checkout -b new_branch_3
     git commit -a -m 'zmiana 1'
     git commit -a -m 'zmiana 2'
     # przelaczmay na master
     git checkout master
+    # wybieramy commit który chcemy przekopiowac
     git log new_branch_3
+    git cherry-pick aaf9623
+    
+
+## COFANIE ZMIAN
+
+#### commit -amend
+
 
