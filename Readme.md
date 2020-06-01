@@ -164,3 +164,4 @@ Sposób scalania gałęzi poprzez dosłownie zmiane bazy.
     
     
 #### git cherry-pick
+
