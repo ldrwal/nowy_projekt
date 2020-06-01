@@ -238,6 +238,13 @@ które znajdują się w poczekalni i nie zostały dodane do staging area.
     git commit plik1.py -m 'dodana zmiana w plik1'
     git reset --hard HEAD~
     
+    
+#### git reflog
+Zapis wszystkich operacji które zarejestrował git
+
+    git reflog
+    
+    git reset --hard HEAD@{3}
 
     
     
