@@ -185,5 +185,20 @@ Kopiowany jest commit wraz z opisem ale w masterze tworzony jest pod nowym znacz
 ## COFANIE ZMIAN
 
 #### commit -amend
+Aktualizacja ostatniego komita.
+Przykład.
+
+    # dokonujemy zmian w pliku1 i pliku 2
+    # nastepnie dodajmy do staging-area tylko jeden plik
+    git add plik1.py
+    git commit -m 'modyfikacje w plikach 1-2'
+    # tutaj opis comita mowi ze zmienilismy dwa pliki a w komicie jest tylko jeden
+    # z pomoca przychodzi komenda --amend
+    git add plik2.py
+    git commit --amend
+    # plik2 zostanie dodany do aktualengo komita
+    # ponowne wywolanie komendy umozliwia nam edycje opisu komita
+    git commit --amend 
+    
 
 
