@@ -161,3 +161,6 @@ Sposób scalania gałęzi poprzez dosłownie zmiane bazy.
     # i przeniesie comity do gałęzi master
     git rebase master
     git checkout master
+    
+    
+#### git cherry-pick
