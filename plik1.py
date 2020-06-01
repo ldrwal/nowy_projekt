@@ -8,6 +8,7 @@ def func_print_range(value=1):
         print('tekst1')
 
         print('tekst3')
+        print('tekst4')
 
 
 if __name__ == '__main__':
