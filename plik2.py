@@ -1,2 +1,7 @@
 # Drugi plik
-# rebase
+# Cwiczenie rabase
+
+
+if __name__ == '__main__':
+    print('tekst')
+
