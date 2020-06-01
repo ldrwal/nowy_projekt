@@ -166,8 +166,6 @@ Sposób scalania gałęzi poprzez dosłownie zmiane bazy.
 #### git cherry-pick
 sposób połączenia tylko wybranych commitow z galezi z masterem
 
-<<<<<<< HEAD
-=======
     # tworzymy commity na nowej galezi
     git checout -b new_branch_3
     git commit -a -m 'zmiana 1'
@@ -176,4 +174,3 @@ sposób połączenia tylko wybranych commitow z galezi z masterem
     git checkout master
     git log new_branch_3
 
->>>>>>> a201f9e... Opis uzycia cherry-pick
