@@ -200,5 +200,44 @@ Przykład.
     # ponowne wywolanie komendy umozliwia nam edycje opisu komita
     git commit --amend 
     
+#### git reset
+Cofanie zmian 
 
+Usuniecie pliku ze staging area.
+    
+    git add plik1.py
+    git reset plik1.py
+    
+Usuniecie zmian w pliku
+
+    git checkout plik1.py
+    
+Jesli chcemy usunac comita
+
+    git commit plik1.py -m 'dodana zmiana w plik1'
+    
+    # usuniecie z podaniem id commita
+    git reset 03cf5a5dceaa18e92ada87e78e10460b9cbb1217
+    
+    # usuniecie ilosciowe HEAD~ilosc comitow wstecz
+    git reset HEAD~5
+    # usuniecie ostaniego comita
+    git reset HEAD~
+
+Polecenia te usuwają comita i przenosza plik do staging area,
+czyli nie tracimy tych zmian.
+Dopiero komenda 
+
+    git checkout plik1.py 
+usunie nasze zmiany w pliku.
+
+Gdy chcemy zrobić to odrazu, uzyjemy parametru --hard
+
+    git commit plik1.py -m 'dodana zmiana w plik1'
+    git reset --hard HEAD~
+    
+
+    
+    
+    
 
