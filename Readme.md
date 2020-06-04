@@ -58,6 +58,21 @@ Git pobiera całą kopie repozytorium.
 
 
 #### git add + staging area
+                |-----------------------|
+           -----|   katalog roboczy     |
+           |    |   (working area)      |
+    git add|    |-----------------------|
+           |     
+           |    |-----------------------|
+           ---->|   Poczekalnia         |
+                |   (staging area)      |--------
+                |-----------------------|       |
+                                                | git commit
+                |-----------------------|       |
+                |   Repozytorium        |<-------
+                |   (repository)        |
+                |-----------------------|
+            
 Dodawanie zmian do repozytorium.
     
     git status
@@ -67,6 +82,7 @@ Komenda powiem nam w jakim stanie jest repozytorium.
     git add plik
     # dodanie wszytkich plikow ze zmianami do poczekalni
     git add . 
+    
 Komenda doda plik do poczekalni staging area. Ponowna edycja pliku
 bez wywolania komnedy commit spowoduje ponowne wykrecie zmian.
 Nasz plik będzie miał jedną zmianę znajdującą się w poczekalnia i drugą, która wymaga dodania
@@ -255,6 +271,63 @@ Czyli jak w comicie który cofamy mieliśmy cos dodane to zostanie to usuniete.
 
     git revert HEAD
     git diff HEAD~2
+    
+
+## ZDALNE REPOZYTORIUM
+
+#### Wstęp
+Lokalna wersja repozytorium u nas na komputerze,
+czyli polecenia git add i commit. Do zdalnego repozytorium np. github
+używamy poleceń push do wysłania zmian i pull/fetch, które pobierają dane z serwera zdalnego
+i aplikują do naszego lokalnego.
+
+#### Zarządzanie
+Pobieramy reposytorium
+
+    git clone https://github.com/jquery/jquery.git
+    # wchodzimy do folderu
+    cd jquery
+    # wyświetlamy źrodło
+    git remote
+    git remote -v
+    
+W celu dodania naszego lokalnego repozytorium do zdalnego.
+
+    git remote add origin https://github.com/ldrwal/nowy_projekt.git
+
+Dodany wpis pojawia się w pliku konfiguracyjnym gita - config
+Możemy dodać kolejne zdalne repozytoria wtedy git push do kilku serwerow.
+
+    git remote add node https://github.com/ldrwal/nowy_projekt_2.git
+    git remote -v
+
+Jeżeli chcemy zmienić nazwę serwera, wykonujemy komendę
+
+    git remote rename node secondary_node
+    # usunięcie wpisu serwera
+    git remote rm secondary_node
+    
+#### git push
+Polecenie wypchnięcia, wysłania repozytorium. Służy do tego polecenie push.
+
+    git push origin master.master
+    # gdzie origin to nazwa serwera, a master to lokalna gałąź -> do zdlanej gałęzi master.
+    # domyślne polecenie to 
+    git push
+    
+Nasze repo nie ustawionego śledzenia. Możemy to sprawdzić poleceniem.
+
+    git branch -vv
+    
+    # następnie
+    git push --set-upstream origin master
+
+    
+
+
+
+
+
     
 
     
